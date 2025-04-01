@@ -15,5 +15,6 @@ blockquote {
   font-style: italic;
 }
 h1,h2{
-  border-bottom: thin dotted #888888;
+  text-decoration: underline;
+  color: #CC6600;
 }
