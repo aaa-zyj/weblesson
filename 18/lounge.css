@@ -57,4 +57,11 @@ h2 {
 	background-repeat: repeat-x;
 
 	text-align: center; 
+  line-height: 1em;
+}
+.elixirs h2{
+  color: black;
+}
+.elixirs h3{
+  color: #d12c47;
 }
