@@ -42,22 +42,5 @@ h2 {
 
 
 }
-.elixirs{
-  border-width: thin;
-  border-style: solid;
-  border-color: #007e7e;
-}
-.elixirs{
-  width: 200px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  margin-left: 20px;
-  text-align: center;
-  background-image: url(images/cocktail.gif);
-  background-repeat: repeat-x;
-  line-height: 1;
-  background-image: url(images/cocktail.gif);
-  background-repeat: repeat-x;
-  text-align: center;
-}
+
+
