@@ -90,3 +90,17 @@ a:hover {
 a{
   text-decoration: none;
 }
+.cd{
+  font-style: italic;
+}
+.artist{
+  font-weight: bold;
+}
+
+.test{
+  color: gold;
+}
+
+h1,h2{
+  font-weight: 600;
+}
