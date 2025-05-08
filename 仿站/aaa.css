@@ -1,0 +1,45 @@
+
+.zp {
+    margin: top 24px;
+}
+
+.image-stack {
+    /* 相对定位，作为子元素绝对定位的参考 */
+    position: relative; 
+}
+
+.image-stack img {
+    /* 绝对定位，让图片重叠 */
+    position: absolute; 
+    left: 0;
+}
+
+/* 控制第一张图片的位置，使其在第二张下面一点 */
+.image-stack img:first-child {
+    top: 20px; /* 可根据需求调整数值，数值越大，向下偏移越多 */
+    z-index: 0; 
+}
+
+/* 控制第二张图片的位置和层级 */
+.image-stack img:last-child {
+    top: 0;
+    z-index: 1; 
+}
+body {
+    display: flex; /* 将 body 设置为弹性容器 */
+    flex-wrap: wrap; /* 允许子元素换行 */
+}
+
+.biaoti {
+    position: relative; /* 设置相对定位 */
+    left: 10%; /* 从左边偏移 50%，可根据实际情况调整 */
+    width: 50%; /* 设置宽度，确保内容有足够空间显示 */
+}
+.image-stack img[src="images/Gold Wheel- Verticle.jpg"] {
+    /* 相对定位，相对于元素原本位置进行偏移 */
+    position: relative; 
+    /* 向左移动，正值表示向右，负值表示向左 */
+    left: 20px; 
+    /* 向下移动，正值表示向下，负值表示向上 */
+    top: -20px 
+}
