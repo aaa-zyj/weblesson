@@ -43,3 +43,25 @@ body {
     /* 向下移动，正值表示向下，负值表示向上 */
     top: -20px 
 }
+.image-stack {
+    position: relative; /* 设置相对定位 */
+    top: 20px; /* 向下移动 20px，可按需调整 */
+    left: 50px; /* 向右移动 20px，可按需调整 */
+}
+
+.horizontal-images {
+  position: fixed; /* 固定定位，相对于浏览器窗口 */
+  bottom: 0; /* 距离底部为 0 */
+  left: 50%; /* 从左边偏移 50% */
+  transform: translateX(-50%); /* 向左平移自身宽度的 50%，实现水平居中 */
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中对齐图片 */
+  gap: 75px; /* 设置图片之间的间距 */
+}
+
+.horizontal-images svg {
+  max-width: 100%;
+  /* 调整 height 来缩小纵横比，这里设为原来的一半 */
+  height: 50%; 
+  width: 50%; 
+}
