@@ -1,6 +1,9 @@
 
 .zp {
-    margin: top 24px;
+    /* 修正原有的错误 margin 写法 */
+    margin-top: 24px; 
+    /* 添加左内边距，数值可按需调整 */
+    padding-left: 70px; 
 }
 
 .image-stack {
@@ -51,17 +54,55 @@ body {
 
 .horizontal-images {
   position: fixed; /* 固定定位，相对于浏览器窗口 */
-  bottom: 0; /* 距离底部为 0 */
+  bottom: 15px; /* 距离底部为 0 */
   left: 50%; /* 从左边偏移 50% */
   transform: translateX(-50%); /* 向左平移自身宽度的 50%，实现水平居中 */
   display: flex; /* 使用 Flexbox 布局 */
   justify-content: center; /* 水平居中对齐图片 */
-  gap: 75px; /* 设置图片之间的间距 */
+  gap: 35px; /* 设置图片之间的间距 */
 }
 
-.horizontal-images svg {
-  max-width: 100%;
-  /* 调整 height 来缩小纵横比，这里设为原来的一半 */
-  height: 50%; 
-  width: 50%; 
+.horizontal-images img {
+  width: 15px;  /* 统一设置宽度 */
+  height: 15px; /* 统一设置高度 */
+  margin: 0 5px; /* 可选：添加间距 */
 }
+
+.xbt1{
+    position: relative; /* 设置相对定位 */
+    top: 100px; /* 向下移动 20px，可按需调整 */
+    left: 400px; /* 向右移动 20px，可按需调整 */
+    display: flex; /* 使用 flexbox 布局 */
+    gap: 65px; /* 添加子元素之间的间距，可按需调整 */
+    /* 若子元素需要垂直排列，可添加以下代码 */
+    /* flex-direction: column; */ 
+    font-size: 12px;
+}
+
+
+
+.smaller-logo {
+    width: 80px; /* 可根据需求调整宽度 */
+    height: auto; /* 正确设置，保持图片比例 */
+    position: relative;
+    top: -7px; /* 负值使元素向上移动，可按需调整 */
+}
+
+
+
+/* 引入 GT Alpina 字体 */
+@font-face {
+    font-family: 'GT Alpina';
+    src: url('fonts/GT-Alpina-Regular.woff2') format('woff2'),
+         url('fonts/GT-Alpina-Regular.woff') format('woff'),
+         url('fonts/GT-Alpina-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 为 .bt 类下的 h1 元素设置字体 */
+.bt h1 {
+    font-family: 'GT Alpina', serif; /* 如果 GT Alpina 不可用，使用 serif 作为后备字体 */
+    font-size: 35px;
+}
+
