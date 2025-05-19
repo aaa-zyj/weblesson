@@ -37,6 +37,8 @@ body {
     position: relative; /* 设置相对定位 */
     left: 10%; /* 从左边偏移 50%，可根据实际情况调整 */
     width: 50%; /* 设置宽度，确保内容有足够空间显示 */
+    margin-top: 120px; /* 向下移动，可按需调整数值 */
+    margin-left: 30px; /* 向右移动，可按需调整数值 */
 }
 .image-stack img[src="images/Gold Wheel- Verticle.jpg"] {
     /* 相对定位，相对于元素原本位置进行偏移 */
@@ -53,7 +55,7 @@ body {
 }
 
 .horizontal-images {
-  position: fixed; /* 固定定位，相对于浏览器窗口 */
+    position: fixed;
   bottom: 15px; /* 距离底部为 0 */
   left: 50%; /* 从左边偏移 50% */
   transform: translateX(-50%); /* 向左平移自身宽度的 50%，实现水平居中 */
@@ -106,3 +108,35 @@ body {
     font-size: 35px;
 }
 
+
+
+.anjian {
+    position: relative;
+    top: -220px;
+    left: -60px;
+    text-decoration: none;
+    color: #fff; /* 文字颜色 */
+    background-color: #333; /* 按钮背景色 */
+    padding: 8px 20px; /* 上下 8px 左右 20px 的内边距 */
+    border-radius: 4px; /* 圆角效果 */
+    transition: all 0.3s; /* 添加过渡动画 */
+}
+
+.anjian2 {
+    position: relative;
+    top: -220px;
+    left: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+/* 添加悬停效果 */
+.anjian:hover,
+.anjian2:hover {
+    background-color: #555; /* 悬停时背景色变亮 */
+    transform: translateY(-2px); /* 悬停时轻微上移 */
+}
