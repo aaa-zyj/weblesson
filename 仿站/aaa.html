@@ -8,10 +8,11 @@
 </head>
 <body>
   <div class="zp">
-    <header>
-      <div class="image-stack">
- <img src="images/Gold Wheel- Verticle.jpg" width="400">
-  <img src="images/About Bentley CTA Teaser.jpg" width="400">
+  <header>
+  <div class="image-stack">
+  <!-- 直接设置图片的宽度和高度 -->
+    <img src="images/Gold Wheel- Verticle.jpg" width="410" height="550">
+  <img src="images/About Bentley CTA Teaser.jpg"width="400" height="500" >
 </div>
     </header>
   </div>
@@ -21,21 +22,34 @@
     <h1>About Bentley</h1>
   </section>
   <section class="main">
-    <p>
-      Bentley is on an extraordinary journey into the future – a future in which 
-      sustainability will be paramount. We have made significant leaps forward, from concept cars featuring electric 
-      powertrains to launches of Bentley hybrid vehicles. 
-    </p>
-  </section>
+    <div class="text">
+      <p>
+        Bentley is on an extraordinary journey into the future – a future in which 
+        sustainability will be paramount. We have made significant leaps forward, from concept cars featuring electric 
+        powertrains to launches of Bentley hybrid vehicles. 
+      </p>
+    </div>
+    
+    <div class="button-container"> <!-- 新增按钮容器 -->
+      <a class="Button1" href="lianjie/tubiao">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 5h-5m5 3h-5M8 11H5.5M3 2v12h10V2z"></svg> 
+        EXPLORE
+      </a>
+      <a class="Button2" href="lianjie/tubiao">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="bm-e-icon__svg"><path stroke="currentcolor" stroke-linejoin="round" stroke-width="1.5" d="M4.667 6.273V3h6.666v3.273M3 5.045V12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5.045L8 8.727z"></path></svg>
+        KEEP ME INFORMED
+      </a>
+    </div>
+</section>
   
   </div>
   <div class="social-container">
-      <div class="xbt1">
-          <a class="xbt1.1">NEWSLETTER</a>
-          <a class="xbt1.1">CONFIGURATOR</a>
+      <div class="xbt">
+          <a class="xbt1">NEWSLETTER</a>
+          <a class="xbt2">CONFIGURATOR</a>
           <img src="images/logo_3d_wings_dark.png" class="smaller-logo">
-          <a class="xbt2.1">LOCATE DEALER</a>
-          <a class="xbt2.1">DOWNLOAD BROCHURE</a>
+          <a class="xbt3">LOCATE DEALER</a>
+          <a class="xbt4">DOWNLOAD BROCHURE</a>
       </div>
       <div class="horizontal-images">
           <img src="images/Instagram.svg" alt="Image 1">
@@ -47,20 +61,6 @@
           <img src="images/WeChat.svg" alt="Image 7">
           <img src="images/LinkedIn Black.svg" alt="Image 8">
       </div>
-      
   </div>
 </body>
-</html>
-
-<a class="anjian" 
-data-layer-id="cta-dce7fde146" href="https://www.bentleymotors.com/en/about-bentley/history-and-heritage.html">
- <bm-e-icon class="bm-e-icon bm-e-button__icon" icon-id="bm-icon-details"></bm-e-icon>
-<span class="bm-e-button__label">EXPLORE</span>
-</a>
-
-
-<a class="anjian2" 
-data-layer-id="cta-14e40785a2" href="/en/pages/newsletter.by_form.html">
-<bm-e-icon class="bm-e-icon bm-e-button__icon" icon-id="bm-icon-inform"></bm-e-icon>
-<span class="bm-e-button__label">KEEP ME INFORMED</span>
-  </a>
+</html >

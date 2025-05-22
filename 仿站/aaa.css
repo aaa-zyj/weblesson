@@ -25,7 +25,7 @@
 
 /* 控制第二张图片的位置和层级 */
 .image-stack img:last-child {
-    top: 0;
+    top: 50px;
     z-index: 1; 
 }
 body {
@@ -55,13 +55,11 @@ body {
 }
 
 .horizontal-images {
-    position: fixed;
-  bottom: 15px; /* 距离底部为 0 */
-  left: 50%; /* 从左边偏移 50% */
-  transform: translateX(-50%); /* 向左平移自身宽度的 50%，实现水平居中 */
-  display: flex; /* 使用 Flexbox 布局 */
-  justify-content: center; /* 水平居中对齐图片 */
-  gap: 35px; /* 设置图片之间的间距 */
+    display: flex; /* 使用 flexbox 布局 */
+    position: relative; /* 改为相对定位 */
+    top: 100px; /* 向下移动 20px，可按需调整 */
+    left: 380px; /* 向右移动 20px，可按需调整 */
+    gap: 65px; /* 添加子元素之间的间距，可按需调整 */
 }
 
 .horizontal-images img {
@@ -70,16 +68,17 @@ body {
   margin: 0 5px; /* 可选：添加间距 */
 }
 
-.xbt1{
+.xbt{
     position: relative; /* 设置相对定位 */
-    top: 100px; /* 向下移动 20px，可按需调整 */
-    left: 400px; /* 向右移动 20px，可按需调整 */
+    top: 50px; /* 向下移动 20px，可按需调整 */
+    left: 300px; /* 向右移动 20px，可按需调整 */
     display: flex; /* 使用 flexbox 布局 */
-    gap: 65px; /* 添加子元素之间的间距，可按需调整 */
+    gap: 90px; /* 添加子元素之间的间距，可按需调整 */
     /* 若子元素需要垂直排列，可添加以下代码 */
     /* flex-direction: column; */ 
     font-size: 12px;
 }
+
 
 
 
@@ -110,53 +109,6 @@ body {
 
 
 
-.anjian {
-    font-family: normal,Arial, Helvetica, sans-serif;
-    position: relative;
-    top: -220px;
-    left: -60px;
-    text-decoration: none;
-    color: #ffffff; /* 文字颜色 */
-    background-color: #394d47; /* 按钮背景色 */
-    padding: 8px 20px; /* 上下 8px 左右 20px 的内边距 */
-    border-radius: 0px; /* 圆角效果 */
-    transition: all 0.3s; /* 添加过渡动画 */
-    font-size: 12px;
-}
-
-.anjian2 {
-    font-family: normal,Arial, Helvetica, sans-serif;
-    position: relative;
-    top: -220px;
-    left: 10px;
-    text-decoration: none;
-    color: #394d47;
-    background-color: #fff;
-    padding: 8px 20px;
-    /* 添加黑色边框 */
-    border: 1px solid #000;
-    border-radius: 0px;
-    transition: all 0.3s;
-    font-size: 12px;
-    align-items: center;
-}
-
-/* 添加悬停效果 */
-.anjian:hover,
-.anjian2:hover {
-    /* 降低不透明度以让颜色变淡 */
-    opacity: 0.8; 
-    transform: translateY(-2px); /* 悬停时轻微上移 */
-}
-
-.anjian, .anjian2 {
-    /* 将按钮设置为 flex 容器 */
-    display: flex; 
-    /* 水平居中内容 */
-    justify-content: center; 
-    /* 垂直居中内容 */
-    align-items: center; 
-}
 
 .bm-e-button__label {
     /* 确保文字在元素内水平居中 */
@@ -165,4 +117,127 @@ body {
 .zp {
     position: relative;
     left: 50px; /* 可根据需求调整数值 */
+}
+
+
+/* 修正 SVG 路径的颜色属性拼写错误 */
+.document-icon path {
+    stroke: currentColor; /* 修正拼写错误，原代码为 currentcolor */
+}
+/* 为 SVG 图标本身添加样式 */
+.email-icon {
+    /* 使用 currentColor 继承父元素的文字颜色 */
+    color: inherit;
+    /* 可以调整图标大小 */
+    width: 1em;
+    height: 1em;
+   vertical-align: middle;    /* 垂直对齐 */
+    margin-right: 0.5em;/* 添加一些间距 */
+  }
+  
+  /* 为包含图标的按钮添加样式 */
+  .icon-button2 {
+      display: inline-flex;
+      align-items: center;
+      padding: 0; /* 移除内边距 */
+      background: none; /* 移除背景颜色 */
+      color: inherit; /* 继承父元素颜色 */
+      border: none; /* 确保无边框 */
+      border-radius: 0; /* 移除圆角 */
+      font-size: inherit; /* 继承父元素字体大小 */
+      cursor: pointer;
+  }
+.icon-button2 .email-icon {
+    /* 可根据需求调整缩放比例 */
+    transform: scale(1.5); 
+    /* 保持图标位置居中 */
+    display: inline-block; 
+}
+
+/* 右移两个主要容器 */
+.biaoti,
+.social-container {
+    margin-left: 100px;  /* 右移距离，可根据需要调整 */
+    
+}
+
+/* 三行网格布局 */
+.main 
+    /* 标题样式保持不变 */
+ .bt h1 {
+        font-family: 'GT Alpina', serif;
+        font-size: 40px;
+        margin-bottom: 0px; /* 原默认值较大，减少标题底部间距 */
+    }
+    
+    /* 主内容区上移 */
+    .main {
+        position: relative;/* 相对定位 */
+        margin-left: auto; 
+        display: flex; 
+        flex-direction: column;
+        top: -20px;
+        color: rgba(0, 0, 0, 0.8); /* 新增颜色设置，0.6是不透明度值，数值越小颜色越淡 */
+    }
+    .text{
+        width: 650px;
+    }
+
+    /* 保持原有图片布局不变 */
+    .Button1 {
+        font-family: normal,Arial, Helvetica, sans-serif;
+        position: relative;
+        text-decoration: none;
+        color: #ffffff; /* 文字颜色 */
+        background-color: #394d47; /* 按钮背景色 */
+        /* 增加左右内边距，让元素变宽 */
+        padding: 8px 20px; 
+        border-radius: 0px; /* 圆角效果 */
+        transition: all 0.3s; /* 添加过渡动画 */
+        font-size: 12px;
+        width: 100px;
+        letter-spacing: 1.5px;  /* 新增字母间距 */
+    }
+    
+    .Button2 {
+        font-family: normal,Arial, Helvetica, sans-serif;/* 字体样式 */
+        position: relative;/* 相对定位 */
+        text-decoration: none;
+        color: #394d47;
+        background-color: #fff;
+        padding: 8px 20px;
+        /* 添加黑色边框 */
+        border: 1px solid #000;
+        border-radius: 0px;
+        transition: all 0.3s;
+        font-size: 12px;
+        align-items: center;
+        width: 200px;
+        height: 25px;
+        letter-spacing: 1.5px;  /* 新增字母间距 */
+    }
+    
+    .Button1:hover,
+    .Button2:hover {
+        /* 降低不透明度以让颜色变淡 */
+        opacity: 0.8; 
+        transform: translateY(-2px); /* 悬停时轻微上移 */
+    }
+.button-container {
+    display: flex;
+    gap: 30px;  /* 按钮间距 */
+    margin-top: 15px;  /* 与段落的间距 */
+}
+.Button1, .Button2{
+    /* 将按钮设置为 flex 容器 */
+    display: flex; 
+    /* 水平居中内容 */
+    justify-content: center; 
+    /* 垂直居中内容 */
+    align-items: center; 
+}
+
+.Button1 svg,
+.Button2 svg {
+    margin-right: 15px; /* 可根据需求调整间距值，这里设置为 15px */
 }
