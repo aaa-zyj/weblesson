@@ -168,6 +168,7 @@ body {
         font-family: 'GT Alpina', serif;
         font-size: 40px;
         margin-bottom: 0px; /* 原默认值较大，减少标题底部间距 */
+        font-family: Bentley, arial, helvetica, sans-serif;/*错误*/
     }
     
     /* 主内容区上移 */
@@ -178,6 +179,7 @@ body {
         flex-direction: column;
         top: -20px;
         color: rgba(0, 0, 0, 0.8); /* 新增颜色设置，0.6是不透明度值，数值越小颜色越淡 */
+        font-family: Bentley, arial, helvetica, sans-serif;/*错误*/
     }
     .text{
         width: 650px;
