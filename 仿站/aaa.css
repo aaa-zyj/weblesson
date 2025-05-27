@@ -243,3 +243,13 @@ body {
 .Button2 svg {
     margin-right: 15px; /* 可根据需求调整间距值，这里设置为 15px */
 }
+/* 去掉超链接下划线，设置字体颜色为黑色 */
+.xbt1, .xbt2, .xbt3, .xbt4 {
+    text-decoration: none;
+    color: black;
+}
+
+/* 鼠标悬停时文字颜色变为灰色 */
+.xbt1:hover, .xbt2:hover, .xbt3:hover, .xbt4:hover {
+    color: gray;
+}
