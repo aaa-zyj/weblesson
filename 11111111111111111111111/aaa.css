@@ -4,6 +4,8 @@
     margin-top: 24px; 
     /* 添加左内边距，数值可按需调整 */
     padding-left: 70px; 
+    position: relative;
+    left: 50px; /* 可根据需求调整数值 */
 }
 
 .image-stack {
@@ -54,7 +56,7 @@ body {
     left: 50px; /* 向右移动 20px，可按需调整 */
 }
 
-.horizontal-images {
+.pricters-images {
     display: flex; /* 使用 flexbox 布局 */
     position: relative; /* 改为相对定位 */
     top: 100px; /* 向下移动 20px，可按需调整 */
@@ -62,7 +64,7 @@ body {
     gap: 65px; /* 添加子元素之间的间距，可按需调整 */
 }
 
-.horizontal-images img {
+.pricters-images img {
   width: 15px;  /* 统一设置宽度 */
   height: 15px; /* 统一设置高度 */
   margin: 0 5px; /* 可选：添加间距 */
@@ -79,9 +81,6 @@ body {
     font-size: 12px;
 }
 
-
-
-
 .smaller-logo {
     width: 80px; /* 可根据需求调整宽度 */
     height: auto; /* 正确设置，保持图片比例 */
@@ -89,36 +88,15 @@ body {
     top: -7px; /* 负值使元素向上移动，可按需调整 */
 }
 
-
-
-/* 引入 GT Alpina 字体 */
-@font-face {
-    font-family: 'GT Alpina';
-    src: url('fonts/GT-Alpina-Regular.woff2') format('woff2'),
-         url('fonts/GT-Alpina-Regular.woff') format('woff'),
-         url('fonts/GT-Alpina-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* 为 .bt 类下的 h1 元素设置字体 */
 .bt h1 {
-    font-family: 'GT Alpina', serif; /* 如果 GT Alpina 不可用，使用 serif 作为后备字体 */
     font-size: 35px;
 }
-
-
-
 
 .bm-e-button__label {
     /* 确保文字在元素内水平居中 */
     text-align: center; 
 }
-.zp {
-    position: relative;
-    left: 50px; /* 可根据需求调整数值 */
-}
-
 
 /* 修正 SVG 路径的颜色属性拼写错误 */
 .document-icon path {
@@ -155,24 +133,24 @@ body {
 }
 
 /* 右移两个主要容器 */
-.biaoti,
-.social-container {
+.biaoti,.social-container {
     margin-left: 100px;  /* 右移距离，可根据需要调整 */
     
 }
 
 /* 三行网格布局 */
-.main 
-    /* 标题样式保持不变 */
- .bt h1 {
-        font-family: 'GT Alpina', serif;
+.main  .bt h1 {
         font-size: 40px;
         margin-bottom: 0px; /* 原默认值较大，减少标题底部间距 */
         font-family: Bentley, arial, helvetica, sans-serif;/*错误*/
+        font-size: 35px;
     }
+    
     
     /* 主内容区上移 */
     .main {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr); /* 三行网格布局 */
         position: relative;/* 相对定位 */
         margin-left: auto; 
         display: flex; 
@@ -187,7 +165,6 @@ body {
 
     /* 保持原有图片布局不变 */
     .Button1 {
-        font-family: normal,Arial, Helvetica, sans-serif;
         position: relative;
         text-decoration: none;
         color: #ffffff; /* 文字颜色 */
@@ -199,10 +176,14 @@ body {
         font-size: 12px;
         width: 100px;
         letter-spacing: 1.5px;  /* 新增字母间距 */
+        display: flex; 
+        /* 水平居中内容 */
+        justify-content: center; 
+        /* 垂直居中内容 */
+        align-items: center; 
     }
     
     .Button2 {
-        font-family: normal,Arial, Helvetica, sans-serif;/* 字体样式 */
         position: relative;/* 相对定位 */
         text-decoration: none;
         color: #394d47;
@@ -217,6 +198,11 @@ body {
         width: 200px;
         height: 25px;
         letter-spacing: 1.5px;  /* 新增字母间距 */
+        display: flex; 
+        /* 水平居中内容 */
+        justify-content: center; 
+        /* 垂直居中内容 */
+        align-items: center; 
     }
     
     .Button1:hover,
@@ -230,14 +216,7 @@ body {
     gap: 30px;  /* 按钮间距 */
     margin-top: 15px;  /* 与段落的间距 */
 }
-.Button1, .Button2{
-    /* 将按钮设置为 flex 容器 */
-    display: flex; 
-    /* 水平居中内容 */
-    justify-content: center; 
-    /* 垂直居中内容 */
-    align-items: center; 
-}
+
 
 .Button1 svg,
 .Button2 svg {
@@ -252,4 +231,17 @@ body {
 /* 鼠标悬停时文字颜色变为灰色 */
 .xbt1:hover, .xbt2:hover, .xbt3:hover, .xbt4:hover {
     color: gray;
+}
+.image-stack .image1 {
+    width: 410px;
+    height: 550px;
+}
+
+.image-stack .image2 {
+    width: 400px;
+    height: 500px;
+}
+.icon1, .icon2 {
+    width: 16px;
+    height: 16px;
 }
